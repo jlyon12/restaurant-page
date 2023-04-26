@@ -1,0 +1,208 @@
+/* nunito-regular - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Nunito";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../assets/fonts/nunito-v25-latin-regular.woff2") format("woff2"),
+		/* Chrome 36+, Opera 23+, Firefox 39+ */
+			url("../assets/fonts/nunito-v25-latin-regular.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-700 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Nunito Bold";
+	font-style: normal;
+	font-weight: 700;
+	src: url("../assets/fonts/nunito-v25-latin-700.woff2") format("woff2"),
+		/* Chrome 36+, Opera 23+, Firefox 39+ */
+			url("../assets/fonts/nunito-v25-latin-700.woff") format("woff"); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+$ff-regular: "Nunito", sans-serif;
+$ff-bold: "Nunito Bold", sans-serif;
+$clr-header: #011627;
+$clr-header-text: #f6f7f8;
+$clr-accent-1: #2ec4b6;
+$clr-accent-2: #20a4f3;
+
+body {
+	font-family: $ff-regular;
+}
+.page-wrapper {
+	min-height: 100vh;
+	overflow-y: hidden;
+	display: grid;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+	grid-template-rows: min-content auto min-content;
+}
+
+.header {
+	background-color: $clr-header;
+	color: $clr-header-text;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	z-index: 1;
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+	img {
+		height: 75px;
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+
+		align-items: center;
+		list-style: none;
+		gap: 2rem;
+	}
+	li:hover {
+		border-top: 2px solid $clr-accent-2;
+		transform: translateY(5px);
+		cursor: pointer;
+	}
+}
+
+.main {
+	z-index: 0;
+	background-color: $clr-header;
+	display: grid;
+	grid-template-areas:
+		"box"
+		"arrow";
+	grid-template-rows: min-content auto;
+	.main-box,
+	.nav-arrow,
+	.info-box {
+		z-index: 0;
+		width: 100%;
+		height: 50%;
+	}
+	.main-box,
+	.info-box {
+		grid-area: box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 100px;
+		margin-bottom: 100px;
+		div {
+			width: 300px;
+			height: 300px;
+		}
+		div:first-of-type {
+			position: relative;
+			transform: translate(-15px, -15px);
+			background-color: $clr-accent-2;
+		}
+		div:nth-of-type(2) {
+			position: absolute;
+			background-color: $clr-header;
+			color: $clr-header-text;
+			display: flex;
+			justify-content: space-between;
+			padding: 0.5rem;
+			h2 {
+				flex-basis: 50%;
+				font-family: $ff-bold;
+			}
+			p {
+				align-self: end;
+				text-align: right;
+			}
+		}
+		div:nth-of-type(3) {
+			position: absolute;
+			z-index: -1;
+			transform: translate(15px, 15px);
+			background-color: $clr-accent-2;
+		}
+	}
+
+	.nav-arrow {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		color: $clr-header-text;
+		div {
+			content: "";
+			background-image: url("../assets/images/arrow-color.svg");
+			background-size: contain;
+			transform: rotate(90deg);
+			width: 50px;
+			height: 50px;
+		}
+		div:hover {
+			content: "";
+			background-image: url("../assets/images/arrow-white.svg");
+			background-size: contain;
+			transform: rotate(90deg);
+			width: 50px;
+			height: 50px;
+		}
+		#arrowBtn2 {
+			transform: rotate(-90deg);
+		}
+	}
+	.info-box {
+		z-index: -1;
+		div:nth-of-type(2) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		ul {
+			padding: 0rem 1rem;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+		li {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-family: $ff-bold;
+		}
+		img {
+			height: 2.5rem;
+		}
+	}
+	.move-up {
+		transition: transform 1500ms;
+	}
+	.move-down {
+		transition: transform 1500ms;
+		transform: translateY(calc(100vh + 100px));
+	}
+	.hidden {
+		display: none;
+	}
+}
+.footer {
+	width: 100%;
+	background-color: $clr-header;
+	color: $clr-header-text;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	padding-bottom: 1rem;
+	img {
+		height: 1.5rem;
+	}
+}
