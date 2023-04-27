@@ -21,11 +21,15 @@ const appendBox = (boxNumber, el, content) => {
 
 const createListItem = (boxNumber, imgName, text) => {
 	const item = document.createElement('li');
-	const img = new Image();
-	img.src = imgName;
+	if (imgName !== undefined) {
+		const img = new Image();
+		img.src = imgName;
+		item.appendChild(img);
+	}
+
 	const itemText = document.createElement('p');
 	itemText.textContent = text;
-	item.appendChild(img);
+
 	item.appendChild(itemText);
 	const currentBox = document.getElementById(`box-${boxNumber}`);
 	const currentList = currentBox.querySelector('ul');

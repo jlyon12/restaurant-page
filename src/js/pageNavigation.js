@@ -1,5 +1,6 @@
 import loadHome from './homePage';
 import loadMenu from './menuPage';
+import loadContact from './contactPage';
 
 const homeLink = document.querySelector('#homeLink');
 const menuLink = document.querySelector('#menuLink');
@@ -15,4 +16,6 @@ homeLink.addEventListener('click', () => {
 menuLink.addEventListener('click', () => {
 	loadMenu();
 });
-contactLink.addEventListener('click', () => {});
+contactLink.addEventListener('click', () => {
+	loadContact();
+});

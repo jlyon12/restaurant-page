@@ -1,9 +1,9 @@
-import dripImg from '../assets/images/drip.svg';
-import espressoImg from '../assets/images/espresso.svg';
-import cortadoImg from '../assets/images/cortado.svg';
-import cappuccinoImg from '../assets/images/cappuccino.svg';
-import americanoImg from '../assets/images/americano.svg';
-import latteImg from '../assets/images/latte.svg';
+import dripImg from '../assets/images/menu-icons/drip.svg';
+import espressoImg from '../assets/images/menu-icons/espresso.svg';
+import cortadoImg from '../assets/images/menu-icons/cortado.svg';
+import cappuccinoImg from '../assets/images/menu-icons/cappuccino.svg';
+import americanoImg from '../assets/images/menu-icons/americano.svg';
+import latteImg from '../assets/images/menu-icons/latte.svg';
 
 import {
 	main,
