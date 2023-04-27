@@ -93,4 +93,11 @@ body {
 	img {
 		height: 1.5rem;
 	}
+	a {
+		text-decoration: none;
+		color: $clr-header-text;
+	}
+	a:hover {
+		font-family: $ff-bold;
+	}
 }

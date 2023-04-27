@@ -10,7 +10,9 @@ const createHeader = (() => {
 	header.classList.add('header');
 
 	const headerLogo = document.createElement('div');
+	headerLogo.setAttribute('class', 'logoLink');
 	const headerImg = new Image();
+	headerImg.setAttribute('class', 'logoLink');
 	headerImg.src = logo;
 	const headerTitle = document.createElement('h1');
 	headerTitle.textContent = 'Drip.';
@@ -49,10 +51,15 @@ const createFooter = (() => {
 	const footer = document.createElement('footer');
 	footer.classList.add('footer');
 	const footerText = document.createElement('p');
-	footerText.textContent = 'created by probableactions';
+	footerText.textContent = 'created by ';
+
+	const footerLink = document.createElement('a');
+	footerLink.setAttribute('href', 'https://github.com/probableactions');
+	footerLink.textContent = 'probableactions';
 	const footerImg = new Image();
 	footerImg.src = gitHubImg;
 	footer.appendChild(footerText);
+	footerText.appendChild(footerLink);
 	footer.appendChild(footerImg);
 	container.appendChild(footer);
 })();
