@@ -12,29 +12,30 @@ import {
 	createListItem,
 	createArrow,
 } from './createElements';
-import enableMenuAnimations from './menuPageAnimations';
+
 import '../styles/menu.scss';
+import enableAnimations from './animations';
 
 const loadMenu = () => {
 	main.textContent = '';
-	createBox('menu-box', 1);
-	appendBox(1, 'ul', null);
-	createListItem(1, dripImg, 'Drip');
-	createListItem(1, espressoImg, 'Espresso');
-	createListItem(1, americanoImg, 'Americano');
-	createListItem(1, cortadoImg, 'Cortado');
-	createListItem(1, cappuccinoImg, 'Cappuccino');
-	createListItem(1, latteImg, 'Latte');
+	createBox('top-box', 3);
+	appendBox(3, 'ul', null);
+	createListItem(3, dripImg, 'Drip');
+	createListItem(3, espressoImg, 'Espresso');
+	createListItem(3, americanoImg, 'Americano');
+	createListItem(3, cortadoImg, 'Cortado');
+	createListItem(3, cappuccinoImg, 'Cappuccino');
+	createListItem(3, latteImg, 'Latte');
 	createArrow('nav-arrow', 1, 'Is there more?');
-	createBox('info-box', 2);
-	appendBox(2, 'h2', 'No... ');
+	createBox('sub-box', 4);
+	appendBox(4, 'h2', 'No... ');
 	appendBox(
-		2,
+		4,
 		'p',
 		"At Drip, we are focused on highlighting the unique quality of the coffee's origin. All of our beverages are coffee-forward and meant to showcase the hard work of our partners around the world."
 	);
 	createArrow('hidden', 2);
-	enableMenuAnimations();
+	enableAnimations();
 };
 
 export default loadMenu;

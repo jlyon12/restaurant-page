@@ -11,26 +11,26 @@ import {
 } from './createElements';
 
 import '../styles/contact.scss';
-import enableContactAnimations from './contactPageAnimations';
+import enableAnimations from './animations';
 
 const loadContact = () => {
 	main.textContent = '';
-	createBox('contact-box', 1);
-	appendBox(1, 'h2', 'Talk to us');
-	appendBox(1, 'p', "it's easy...");
-	appendBox(1, 'ul', null);
-	createListItem(1, '', 'call us');
-	createListItem(1, '', 'email us');
-	createListItem(1, '', 'visit us');
-	createListItem(1, '', 'Sure.. even snail mail us');
+	createBox('top-box', 5);
+	appendBox(5, 'h2', 'Talk to us');
+	appendBox(5, 'p', "it's easy...");
+	appendBox(5, 'ul', null);
+	createListItem(5, '', 'call us');
+	createListItem(5, '', 'email us');
+	createListItem(5, '', 'visit us');
+	createListItem(5, '', 'Sure.. even snail mail us');
 	createArrow('nav-arrow', 1, 'Hit our line!');
-	createBox('info-box', 2);
-	appendBox(2, 'ul', null);
-	createListItem(2, emailImg, 'dripDrops@drip.com');
-	createListItem(2, locationImg, '1071 Valencia St, San Francisco CA, 94110');
-	createListItem(2, phoneImg, '(415) 826-0607');
+	createBox('sub-box', 6);
+	appendBox(6, 'ul', null);
+	createListItem(6, emailImg, 'dripDrops@drip.com');
+	createListItem(6, locationImg, '1071 Valencia St, San Francisco CA, 94110');
+	createListItem(6, phoneImg, '(415) 826-0607');
 	createArrow('hidden', 2);
-	enableContactAnimations();
+	enableAnimations();
 };
 
 export default loadContact;

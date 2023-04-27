@@ -32,6 +32,7 @@ body {
 .page-wrapper {
 	min-height: 100vh;
 	overflow-y: hidden;
+	overflow-x: hidden;
 	display: grid;
 	grid-template-areas:
 		'header'
@@ -57,6 +58,7 @@ body {
 	img {
 		height: 75px;
 	}
+
 	ul {
 		display: flex;
 		justify-content: space-between;
@@ -80,7 +82,80 @@ body {
 		'box'
 		'arrow';
 	grid-template-rows: min-content auto;
+
+	.top-box {
+		z-index: 1;
+	}
+	.sub-box {
+		z-index: 0;
+	}
+
+	.top-box,
+	.sub-box {
+		grid-area: box;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 100px;
+		margin-bottom: 25px;
+		div {
+			width: 300px;
+			height: 300px;
+		}
+		div:first-of-type {
+			position: relative;
+			transform: translate(-15px, -15px);
+			background-color: $clr-accent-2;
+		}
+		div:nth-of-type(2) {
+			position: absolute;
+			background-color: $clr-header;
+			color: $clr-header-text;
+			padding: 1rem;
+		}
+		div:nth-of-type(3) {
+			position: absolute;
+			z-index: -1;
+			transform: translate(15px, 15px);
+			background-color: $clr-accent-2;
+		}
+	}
+
+	.nav-arrow {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $clr-header-text;
+		div {
+			flex-shrink: 0;
+			content: '';
+			background-image: url('../assets/images/arrow-color.svg');
+			background-size: contain;
+			transform: rotate(90deg);
+			width: 50px;
+			height: 50px;
+		}
+		div:hover {
+			background-image: url('../assets/images/arrow-white.svg');
+		}
+		#arrowBtn2 {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.move-up {
+		transition: transform 1500ms;
+	}
+	.move-down {
+		transition: transform 1500ms;
+		transform: translateY(calc(100vh + 100px));
+	}
+	.hidden {
+		display: none;
+	}
 }
+
 .footer {
 	width: 100%;
 	background-color: $clr-header;

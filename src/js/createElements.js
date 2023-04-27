@@ -5,7 +5,7 @@ const createBox = (className, boxNumber) => {
 	box.classList.add(className);
 	const leftBorder = document.createElement('div');
 	const contentBox = document.createElement('div');
-	contentBox.setAttribute('id', `box-${boxNumber}`);
+	contentBox.setAttribute('id', `contentBox-${boxNumber}`);
 	const rightBorder = document.createElement('div');
 	box.appendChild(leftBorder);
 	box.appendChild(contentBox);
@@ -14,7 +14,7 @@ const createBox = (className, boxNumber) => {
 };
 
 const appendBox = (boxNumber, el, content) => {
-	const currentBox = document.getElementById(`box-${boxNumber}`);
+	const currentBox = document.getElementById(`contentBox-${boxNumber}`);
 	const element = currentBox.appendChild(document.createElement(el));
 	element.textContent = content;
 };
@@ -31,7 +31,7 @@ const createListItem = (boxNumber, imgName, text) => {
 	itemText.textContent = text;
 
 	item.appendChild(itemText);
-	const currentBox = document.getElementById(`box-${boxNumber}`);
+	const currentBox = document.getElementById(`contentBox-${boxNumber}`);
 	const currentList = currentBox.querySelector('ul');
 	currentList.appendChild(item);
 };

@@ -1,89 +1,6 @@
 @import './main.scss';
 
-.menu-box,
-.nav-arrow,
-.info-box {
-	width: 100%;
-	height: 50%;
-}
-.menu-box,
-.info-box {
-	grid-area: box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	div {
-		width: 300px;
-		height: 300px;
-	}
-	div:first-of-type {
-		position: relative;
-		transform: translate(-15px, -15px);
-		background-color: $clr-accent-2;
-	}
-	div:nth-of-type(2) {
-		position: absolute;
-		background-color: $clr-header;
-		color: $clr-header-text;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		padding: 0.5rem;
-		h2 {
-			font-family: $ff-bold;
-		}
-		p {
-			text-align: center;
-			align-self: center;
-		}
-	}
-	div:nth-of-type(3) {
-		position: absolute;
-		z-index: -1;
-		transform: translate(15px, 15px);
-		background-color: $clr-accent-2;
-	}
-}
-.menu-box {
-	z-index: 1;
-}
-.info-box {
-	z-index: -4;
-}
-
-.nav-arrow {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-	color: $clr-header-text;
-	div {
-		content: '';
-		background-image: url('../assets/images/arrow-color.svg');
-		background-size: contain;
-		transform: rotate(90deg);
-		width: 50px;
-		height: 50px;
-	}
-	div:hover {
-		background-image: url('../assets/images/arrow-white.svg');
-	}
-	#arrowBtn2 {
-		transform: rotate(-90deg);
-	}
-}
-.menu-box {
-	z-index: -1;
-	div:nth-of-type(2) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+#contentBox-3 {
 	ul {
 		padding: 0rem 1rem;
 		list-style: none;
@@ -104,13 +21,7 @@
 		height: 2.5rem;
 	}
 }
-.move-up {
-	transition: transform 1500ms;
-}
-.move-down {
-	transition: transform 1500ms;
-	transform: translateY(calc(100vh + 100px));
-}
-.hidden {
-	display: none;
+#contentBox-4 {
+	display: flex;
+	flex-wrap: wrap;
 }
