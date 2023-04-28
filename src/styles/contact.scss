@@ -16,15 +16,13 @@
 		font-family: $ff-bold;
 	}
 	ul {
+		width: 100%;
 		padding: 0;
 		display: grid;
 		list-style-type: none;
 	}
-	li {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-		align-self: end;
+	li p {
+		text-align: right;
 		font-family: $ff-bold;
 	}
 }

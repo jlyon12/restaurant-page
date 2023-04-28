@@ -28,7 +28,7 @@ const loadMenu = () => {
 	createListItem(3, latteImg, 'Latte');
 	createArrow('nav-arrow', 1, 'Is there more?');
 	createBox('sub-box', 4);
-	appendBox(4, 'h2', 'No... ');
+	appendBox(4, 'h2', 'Simple is good.');
 	appendBox(
 		4,
 		'p',
