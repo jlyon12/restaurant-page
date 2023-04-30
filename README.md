@@ -10,7 +10,11 @@ This is created using HTML, CSS and vanilla JavaScript. The purpose of this proj
 
 ## Getting Started
 
+Live demo <a href='https://probableactions.github.io/restaurant-page/'>here.</a>
+
 ## Version History
+
+- 1.0 Initial Release
 
 ## License
 
