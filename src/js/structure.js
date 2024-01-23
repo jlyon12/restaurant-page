@@ -54,8 +54,8 @@ const createFooter = (() => {
 	footerText.textContent = 'created by ';
 
 	const footerLink = document.createElement('a');
-	footerLink.setAttribute('href', 'https://github.com/probableactions');
-	footerLink.textContent = 'probableactions';
+	footerLink.setAttribute('href', 'https://github.com/jlyon12');
+	footerLink.textContent = 'jlyon12';
 	const footerImg = new Image();
 	footerImg.src = gitHubImg;
 	footer.appendChild(footerText);

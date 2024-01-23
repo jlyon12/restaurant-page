@@ -10,7 +10,7 @@ This is created using HTML, CSS and vanilla JavaScript. The purpose of this proj
 
 ## Getting Started
 
-Live demo <a href='https://probableactions.github.io/restaurant-page/'>here.</a>
+Live demo <a href='https://jlyon12.github.io/restaurant-page/'>here.</a>
 
 ## Version History
 

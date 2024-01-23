@@ -11,14 +11,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/probableactions/restaurant-page.git"
+		"url": "git+ssh://git@github.com/jlyon12/restaurant-page.git"
 	},
-	"author": "probableactions",
+	"author": "jlyon12",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/probableactions/restaurant-page/issues"
+		"url": "https://github.com/jlyon12/restaurant-page/issues"
 	},
-	"homepage": "https://github.com/probableactions/restaurant-page#readme",
+	"homepage": "https://github.com/jlyon12/restaurant-page#readme",
 	"devDependencies": {
 		"css-loader": "^6.7.3",
 		"eslint": "^8.38.0",
